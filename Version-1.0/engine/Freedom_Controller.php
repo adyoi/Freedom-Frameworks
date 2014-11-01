@@ -5,7 +5,7 @@
  *	This Frameworks built in Native PHP 5.5.15
  *	------------------------------------------
  *	Started_On : 11 Oct 2014 19:14
- *	File_name  : ./engine/Freedom_Frameworks.php
+ *	File_name  : ./engine/Freedom_Controller.php
  *	--------------------------------------------
  *	Adi Apriyanto
  */
