@@ -1,0 +1,19 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.parameter{
+  text-align: left;
+  border:1px solid #ddd;
+  margin:auto;
+}
+
+.parameter td{
+  padding:10px;
+  border:1px solid #ddd;
+  word
+}
