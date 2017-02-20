@@ -1,5 +1,5 @@
-FreedomFrameworks | http://adyoi.com/freedom
-============================================
+Freedom Frameworks
+=================
 
 Freedom Frameworks Featuring Amazing Bootstrap is Simply and Powerful This Frameworks built in Native PHP
 
@@ -30,14 +30,7 @@ class Index extends FF_Controller {
 }
 
 /* File_name : ./controllers/index.php */
-
 /* Freedom Frameworks Index_Controller */
-
-Controller Usage :
-==================
-Example 1 : http://adyoi.com/freedom/index/param/1/2/3/4/5
-
-Example 2 : http://adyoi.com/freedom/index.php/param/1/2/3/4/5
 
 Download :
 ==========
