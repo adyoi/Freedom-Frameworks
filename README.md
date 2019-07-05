@@ -1,37 +1,123 @@
-Freedom Frameworks
-=================
+# Freedoms
+Freedoms is Simply and Powerful PHP Class
 
-Freedom Frameworks Featuring Amazing Bootstrap is Simply and Powerful This Frameworks built in Native PHP
+```
+Project
+-------
+link : https://gitlab.com/adyoi/freedoms
 
-Controller Installation :
-=========================
-<?php if(empty($_SERVER['HTTP_REFERER'])) return 0;
+Repository
+----------
+link : https://gitlab.com/adyoi/freedoms.git
 
-class Index extends FF_Controller {
+Live Demo Frontend
+------------------
+link : http://freedoms.pe.hu
+user : demo
+pass : demo
+
+Live Demo Backend
+-----------------
+link : http://freedoms.pe.hu/admin
+user : admin
+pass : admin
+```
+
+### Directory Tree Structure
+
+```
+Freedoms
+		|
+		└-- app
+		|	|
+		|	└-- assets
+		|	|	|
+		|	|	└-- dist (Backend)
+		|	|	|	|
+		|	|	|	└-- css
+		|	|	|	└-- img
+		|	|	|	└-- js
+		|	|	|	
+		|	|	└-- main (Frontend)
+		|	|	|	└-- css
+		|	|	|	└-- fonts
+		|	|	|	└-- images
+		|	|	|	└-- js
+		|	|	|
+		|	|	└-- plugins
+		|	|		|
+		|	|		└-- (JQuery etc.)
+		|	|
+		|	└-- libs
+		|	|	|
+		|	|	└-- (PHP Library etc.)
+		|	|
+		|	└-- public (Controller)
+		|	|	|
+		|	|	└-- admin (Backend View and Menu)
+		|	|	|	|
+		|	|	|	└-- account
+		|	|	|	└-- dashboard
+		|	|	|	└-- user
+		|	|	|
+		|	|	└-- index (Frontend View)
+		|	|	
+		|	└-- template
+		|
+		└-- config
+		└-- engine
+```
+
+### System Schema
+```
+Frontend :
+Start --> Error Handler --> Autoload --> Route --> Controller --> Template --> View 
+
+Backend :
+Start --> Error Handler --> Autoload --> Route --> Controller --> Template --> Authorize --> View
+
+```
+
+
+### Controller Installation
+```
+<?php
+
+/* 
+ *	Freedoms version 0.0.1
+ */
  
- function __construct () {
- 
-  parent::__construct();
-
- }
- 
- public function index () {
-  
-  $this->view->page('index/index', 0);
-
- }
- 
- public function param($arg) {
-  
-  $this->view->msg($arg[0] . ' , ' . $arg[1]. ' , ' . $arg[2]. ' , ' . $arg[3]. ' , ' . $arg[4]);
-
- }
-
+namespace Freedoms
+{
+	class Index
+	{
+		var $function = array("greets");
+		
+		public function __construct()
+		{	
+			AutoLoad :: load('engines\Render');
+		}
+		
+		public static function index()
+		{
+			Render :: page('index', null);
+		}
+	
+		public static function param ($arg)
+		{	
+			print_r ($arg);
+		}
+		
+		public static function greets ($msg)
+		{
+			echo $msg;
+		}
+		
+	}
+	if(!defined('names')) exit('forbidden access');
 }
+```
 
-/* File_name : ./controllers/index.php */
-/* Freedom Frameworks Index_Controller */
+### Terms and Conditions of Use
 
-Download :
-==========
-https://github.com/adyoi/FreedomFrameworks/releases/
+Freedoms PHP Class by Adi Apriyanto is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
